@@ -1,0 +1,25 @@
+# User Local Configuration & Secrets
+config.json
+*.env
+*.env.*
+*.token
+*.key
+*Credentials*
+*AccessToken*
+*Secret*
+*.pem
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs & Temporary Files
+*.log
+transcript*.jsonl
+tmp/
+temp/

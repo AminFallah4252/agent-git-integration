@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "default_provider": "github",
+  "workflow": {
+    "strategy": "trunk-based",
+    "feature_branch_prefix": "feat/",
+    "fix_branch_prefix": "fix/",
+    "refactor_branch_prefix": "refactor/",
+    "chore_branch_prefix": "chore/",
+    "commit_convention": "conventional",
+    "ticket_prefix": "",
+    "protected_branches": [
+      "main",
+      "master",
+      "production",
+      "staging",
+      "release"
+    ]
+  },
+  "safety": {
+    "block_secret_commits": true,
+    "force_with_lease_only": true,
+    "confirm_protected_push": true,
+    "scrub_credentials_from_remote": true
+  },
+  "providers": {
+    "github": {
+      "enabled": true,
+      "auth_mode": "token_file",
+      "token_path": "d:/Projects/Personal/Antigravity/GithubAccessToken.txt",
+      "default_owner": "AminFallah4252",
+      "api_endpoint": "https://api.github.com",
+      "use_cli_if_available": true
+    },
+    "gitlab": {
+      "enabled": false,
+      "auth_mode": "token_file",
+      "token_path": "~/.config/git-integration/gitlab_token.txt",
+      "default_owner": "",
+      "api_endpoint": "https://gitlab.com/api/v4",
+      "use_cli_if_available": true
+    },
+    "bitbucket": {
+      "enabled": false,
+      "auth_mode": "app_password",
+      "username": "",
+      "token_path": "~/.config/git-integration/bitbucket_token.txt",
+      "workspace": "",
+      "api_endpoint": "https://api.bitbucket.org/2.0"
+    },
+    "gitea": {
+      "enabled": false,
+      "auth_mode": "token_file",
+      "token_path": "~/.config/git-integration/gitea_token.txt",
+      "api_endpoint": "https://gitea.local/api/v1"
+    }
+  }
+}
